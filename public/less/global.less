@@ -1,0 +1,66 @@
+//Clear
+html,body,
+div,dl,dt,dd,ul,ol,li,form,table,tr,td,
+h1,h2,h3,h4,h5,h6,pre,p,span,b,i,a,
+input,textarea,fieldset { margin: 0; padding: 0; outline: none;}
+
+:focus {outline: 0; }
+
+ul { list-style-type: none; }
+img, fieldset  { border: none; }
+table { border-collapse: collapse; border-spacing: 0; }
+
+input[type="submit"] { cursor: pointer;}
+
+//Общее
+html{
+	min-height: 100%;
+}
+body{
+	-webkit-font-smoothing: antialiased;
+	font-family: @global_font;
+	font-size: @global_font_size;
+	color: @global_text_color;
+	min-height: 100%;
+	background: #fff;
+}
+
+h1,h2,h3,h4,h5,h6{
+	font-family: @global_font_title;
+}
+
+h1{
+	font-size: 72px;
+}
+h2{
+	font-size: 30px;
+}
+h3{
+	font-size: 28px;
+}
+h4{
+	font-size: 23px;
+}
+
+textarea{
+	resize:none;
+}
+
+input,textarea,button{
+	font-family: @global_font;
+}
+
+input[type="submit"], button[type="submit"]{
+	cursor: pointer;
+}
+
+div, input, area, section{
+	-moz-box-sizing: border-box; /* Firefox 1, probably can drop this */
+	-webkit-box-sizing: border-box; /* Safari 3-4, also probably droppable */
+	box-sizing: border-box; /* Everything else */
+}
+
+.centering{
+	max-width: 1170px;
+	margin: 0 auto;
+}

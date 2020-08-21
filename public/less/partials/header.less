@@ -1,0 +1,121 @@
+header{
+	box-sizing: border-box;
+	width: 100%;
+	background: #fff;
+	padding: 26px 16px;
+	padding-bottom: 5px;
+	position: relative;
+	h3{
+		text-align: center;
+		line-height: 47px;
+		letter-spacing: 1px;
+	}
+	nav{
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+		margin: 45px 0;
+		transition: left 400ms;
+		a{
+			font-size: 15px;
+			line-height: 18px;
+			letter-spacing: 2px;
+			text-decoration: none;
+			color: @global_text_color;
+			transition: color 400ms;
+			&:hover{
+				color: #FF7931;
+			}
+		}
+	}
+	.burger_nav{
+		display: none;
+		background: #FF7931;
+		width: 50px;
+		height: 50px;
+		position: absolute;
+		left: 0;
+		top: 0;
+		cursor: pointer;
+		transition: left 400ms, z-index 400ms;
+		&:before{
+			content: '';
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			background: url("img/menu.svg");
+			background-position: center;
+			background-repeat: no-repeat;
+		}
+	}
+}
+
+
+@media (max-width: 1200px) {
+	header{
+		
+	}
+}
+
+@media (max-width: 800px) {
+	header{
+		padding: 45px;
+		padding-bottom: 30px;
+		.burger_nav{
+			display: block;
+		}
+		nav{
+			position: fixed;
+			left: -100%;
+			flex-direction: column;
+			padding: 30px 0;
+			padding-top: 75px;
+			width: 100vw;
+			top: 0;
+			background: #fff;
+			z-index: 55;
+			margin: 0;
+			height: 100vh;
+			overflow-x: hidden;
+			overflow-y: auto;
+			a{
+				background: #F9F9FC;
+				margin-bottom: 20px;
+				font-size: 16px;
+				line-height: 19px;
+				letter-spacing: 0.1em;
+				color: #48494D;
+				display: block;
+				width: 100%;
+				padding: 18px 16px;
+				padding-right: 50px;
+				position: relative;
+				box-sizing: border-box;
+				&:after{
+					content: '';
+					position: absolute;
+					top: 22px;
+					right: 22px;
+					background: url("img/arrow.svg") no-repeat;
+					width: 12px;
+					height: 14px;
+				}
+			}
+		}
+		&.nav_open{
+			nav{
+				left: 0;
+			}
+			.burger_nav{
+				left: ~"calc(100% - 50px)";
+				background: none;
+				z-index: 56;
+				&:before{
+					background: url("img/close.svg");
+					background-position: center;
+					background-repeat: no-repeat;
+				}
+			}
+		}
+	}
+}
