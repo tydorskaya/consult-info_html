@@ -51,14 +51,6 @@ setTimeout(function () {
    });
 }, 0);
 
-//фейковые кнопки на банере (в связи с дизайном)
-/*$(document).on('click', '.home_banner .slide .owl-nav-fake button', function (e) {
-   var nameClass = $(this).attr('class');
-   $(this).closest('owl-carousel').find('.owl-nav').find('".'+nameClass+'"').click();
-   console.log('".'+nameClass+'"');
-});*/
-
-
 
 
 

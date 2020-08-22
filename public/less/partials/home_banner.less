@@ -48,11 +48,52 @@
         cursor: pointer;
         width: 40vw;
         height: 42px;
+        color: #fff;
+        &.owl-prev,  &.owl-next{
+          position: relative;
+          &:before{
+            content: '';
+            position: absolute;
+            background: url("img/nav_borfer.svg") no-repeat center;
+            width: 20px;
+            height: 20px;
+          }
+          span{
+            position: relative;
+            &:before{
+              content: '';
+              position: absolute;
+              height: 1px;
+              width: 64px;
+              background: #fff;
+              top: 8px;
+            }
+          }
+        }
         &.owl-prev{
-
+          text-align: left;
+          &:before{
+            right: 15px;
+          }
+          span{
+            &:before{
+              left: 100%;
+              margin-left: 10px;
+            }
+          }
         }
         &.owl-next{
-
+          text-align: right;
+          &:before{
+            left: 15px;
+            transform: rotate(180deg);
+          }
+          span{
+            &:before{
+              right: 100%;
+              margin-right: 10px;
+            }
+          }
         }
       }
     }
@@ -88,6 +129,26 @@
       }
       .desc{
         max-width: 100%;
+      }
+    }
+    .owl-dots {
+      margin-top: -37px;
+      z-index: 5;
+      position: relative;
+    }
+  }
+  .owl-dots{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    button.owl-dot{
+      width: 10px;
+      margin: 7px;
+      height: 10px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.4);
+      &.active{
+        background: #FFFFFF;
       }
     }
   }

@@ -109,5 +109,16 @@
         transition: opacity 400ms;
       }
     }
+    .owl-dots {
+      z-index: 5;
+      margin-top: 18px;
+      position: relative;
+      button.owl-dot{
+        background: rgba(0, 0, 0, 0.3);
+        &.active{
+          background: #000000;
+        }
+      }
+    }
   }
 }
