@@ -1,0 +1,109 @@
+﻿.pagination{
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .pagination_item{
+    width: 13px;
+    margin: 7px;
+    cursor: pointer;
+    border-bottom: 1px solid transparent;
+    color: #000000;
+    opacity: 0.4;
+    font-size: 14px;
+    line-height: 17px;
+    transition: color 400ms;
+    &:hover{
+      color: @orange;
+    }
+    &.active{
+      border-color: @orange;
+      font-size: 20px;
+      line-height: 24px;
+      opacity: 1;
+      &:hover{
+        color: #000;
+      }
+    }
+    &.pagination_pass{
+      cursor: default;
+      &:hover{
+        color: #000;
+      }
+    }
+  }
+  .pagination_prev, .pagination_next{
+    width: 25px;
+    height: 28px;
+    opacity: .4;
+    transition: opacity 400ms;
+    cursor: pointer;
+    background: url("img/pagination.svg") center no-repeat;
+    border-right: 1px solid #000;
+    &:hover{
+      opacity: 1;
+    }
+    &.disabled{
+      cursor: default;
+      &:hover{
+        opacity: .4;
+      }
+    }
+  }
+  .pagination_prev{
+    margin-right: 20%;
+  }
+  .pagination_next{
+    margin-left: 20%;
+    transform: rotate(180deg);
+  }
+}
+
+@media (max-width: 1200px) {
+
+}
+
+@media (max-width: 900px) {
+  .pagination{
+    .pagination_item{
+      width: 39px;
+      height: 39px;
+      margin: 0;
+      color: #48494D;
+      opacity: 1;
+      font-size: 18px;
+      line-height: 22px;
+      border: 1px solid transparent;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      &:hover{
+        color: @orange;
+      }
+      &.active{
+        border-color: @orange;
+        color: @orange;
+        font-size: 18px;
+        line-height: 22px;
+        &:hover{
+          color: @orange;
+        }
+      }
+      &.pagination_pass{
+        cursor: default;
+        &:hover{
+          color: #48494D;
+        }
+      }
+    }
+    .pagination_prev{
+      margin-right: 10px;
+      border: none;
+    }
+    .pagination_next{
+      margin-left: 10px;
+      border: none;
+      transform: rotate(180deg);
+    }
+  }
+}

@@ -1,0 +1,34 @@
+.banner_list .banner {
+  display: block;
+  margin-bottom: 30px;
+  position: relative;
+}
+.banner_list .banner:last-of-type {
+  margin-bottom: 0;
+}
+.banner_list .banner img {
+  width: 100%;
+  display: block;
+}
+.banner_list .banner .title {
+  position: absolute;
+  box-sizing: border-box;
+  top: 0;
+  left: 0;
+  width: 100%;
+  line-height: 150%;
+  text-align: center;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 40px 60px;
+  color: #ffffff;
+}
+.banner_list .banner .btn {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.banner_list .banner.light .title {
+  color: #1A1C1C;
+}

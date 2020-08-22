@@ -1,0 +1,113 @@
+﻿.owl_home_bottom{
+  margin-bottom: 90px;
+  position: relative;
+  .owl-item{
+    height: 136px;
+    display: flex;
+    align-items: center;
+  }
+  .slide{
+    width: 100%;
+    background-position: center !important;
+    background-size: cover !important;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 107px;
+    transition: height 400ms;
+    .title, .btn{
+      opacity: 0;
+      transition: opacity 400ms;
+    }
+    .title{
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 19px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #FFFFFF;
+      font-family: @global_font;
+    }
+    .btn{
+      border-color: #fff;
+      margin-top: 16px;
+      &:hover{
+        background: #fff;
+        color: #000;
+      }
+    }
+    &:hover{
+      height: 136px;
+      .title, .btn{
+        opacity: 1;
+      }
+    }
+  }
+  .owl-nav{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 0;
+    button.owl-prev, button.owl-next{
+      position: absolute;
+      top: 46px;
+      width: 44px;
+      height: 44px;
+      background: #fff;
+      box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
+      &:after{
+        content: '';
+        position: absolute;
+        width: 14px;
+        height: 14px;
+        top: 15px;
+        background: url("img/pagination.svg") center no-repeat;
+        opacity: .4;
+      }
+    }
+    button.owl-prev{
+      left: -22px;
+      &:after{
+        left: 15px;
+      }
+    }
+    button.owl-next{
+      right: -22px;
+      &:after{
+        transform: rotate(180deg);
+        left: 12px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .owl_home_bottom{
+    padding: 0 16px;
+    .owl-nav{
+      button.owl-prev{
+        left: 0;
+      }
+      button.owl-next{
+        right: 0;
+      }
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .owl_home_bottom{
+    margin-bottom: 50px;
+    .slide{
+      height: 136px;
+      .title, .btn{
+        opacity: 1;
+        transition: opacity 400ms;
+      }
+    }
+  }
+}

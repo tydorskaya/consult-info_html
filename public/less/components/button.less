@@ -13,6 +13,8 @@
 	letter-spacing: 2px;
 	text-transform: uppercase;
 	color: #fff;
+	text-decoration: none;
+	position: relative;
 	&:hover{
 		
 	}
@@ -24,6 +26,15 @@
 		padding-right: 60px;
 		background: @button_bg;
 		border: 2px solid @orange;
+		&:after{
+			content: '';
+			position: absolute;
+			right: 30px;
+			top: 14px;
+			background: url("img/arrow_look.svg");
+			width: 16px;
+			height: 16px;
+		}
 		&:hover{
 			background: @orange;
 		}
